@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Professional Handwriting Services</title>
+  <meta name="description" content="Neat handwriting, handwritten notes, fair copy, project formatting and calligraphy services. Contact us on WhatsApp.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9ff;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 16px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 15px #0000000d;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: #4f46e5;
+    }
+
+    .header-btn, .main-btn {
+      background: #16a34a;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 9px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .hero {
+      padding: 70px 6%;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      background: linear-gradient(135deg, #eef2ff, #ffffff);
+    }
+
+    .tag {
+      color: #4f46e5;
+      background: #e0e7ff;
+      padding: 7px 13px;
+      border-radius: 30px;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 55px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #4f46e5;
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: #596579;
+      margin-bottom: 25px;
+    }
+
+    .hero-image {
+      background: white;
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: 0 15px 45px #252b5017;
+    }
+
+    .paper {
+      background: repeating-linear-gradient(
+        to bottom,
+        #ffffff 0px,
+        #ffffff 31px,
+        #dbeafe 32px
+      );
+      border: 1px solid #dbeafe;
+      padding: 28px 22px;
+      border-radius: 12px;
+      min-height: 280px;
+      transform: rotate(1deg);
+    }
+
+    .paper h3 {
+      color: #4f46e5;
+      font-family: Georgia, serif;
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .handwriting {
+      font-family: "Segoe Print", "Comic Sans MS", cursive;
+      font-size: 17px;
+      color: #334155;
+      line-height: 2;
+    }
+
+    section {
+      padding: 65px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      text-align: center;
+      color: #64748b;
+      margin: 0 auto 35px;
+      max-width: 650px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid #e8eaf2;
+      padding: 26px;
+      border-radius: 15px;
+      box-shadow: 0 7px 22px #00000006;
+    }
+
+    .service-card .emoji {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    .why {
+      background: #eef2ff;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .benefit {
+      background: white;
+      padding: 18px;
+      border-radius: 12px;
+    }
+
+    .benefit strong {
+      color: #3730a3;
+    }
+
+    .cta {
+      text-align: center;
+      background: #312e81;
+      color: white;
+      padding: 60px 6%;
+    }
+
+    .cta h2 {
+      font-size: 32px;
+      margin-bottom: 14px;
+    }
+
+    .cta p {
+      color: #e0e7ff;
+      margin-bottom: 25px;
+    }
+
+    .cta .main-btn {
+      background: #22c55e;
+    }
+
+    footer {
+      background: #111827;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 22px 15px;
+      font-size: 14px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #16a34a;
+      color: white;
+      padding: 14px 19px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 5px 20px #00000025;
+      z-index: 10;
+    }
+
+    @media (max-width: 750px) {
+      header {
+        padding: 14px 5%;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .header-btn {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6%;
+        gap: 30px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 48px 6%;
+      }
+
+      .section-title, .cta h2 {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">✍️ Handwriting Pro</div>
+    <a class="header-btn" href="#contact">Contact Us</a>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div>
+        <span class="tag">NEAT • CLEAN • PROFESSIONAL</span>
+
+        <h1>
+          Beautiful & Neat
+          <span>Handwriting</span>
+          Services
+        </h1>
+
+        <p>
+          Handwritten notes, fair copy, project writing,
+          calligraphy aur handwriting practice ke liye
+          professional service. Apni requirement batayein
+          aur WhatsApp par contact karein.
+        </p>
+
+        <a class="main-btn" href="#contact">
+          📲 Contact on WhatsApp
+        </a>
+      </div>
+
+      <div class="hero-image">
+        <div class="paper">
+          <h3>Beautiful Handwriting</h3>
+          <p class="handwriting">
+            Welcome to our handwriting service!<br>
+            Clean and organized notes.<br>
+            Beautiful letters and words.<br>
+            Quality work with attention to detail.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="section-title">Our Handwriting Services</h2>
+      <p class="section-desc">
+        Aapki zaroorat ke hisaab se handwriting aur
+        writing-related services available hain.
+      </p>
+
+      <div class="services">
+
+        <div class="service-card">
+          <div class="emoji">📚</div>
+          <h3>Handwritten Notes</h3>
+          <p>
+            Study notes aur revision material ko
+            saaf aur organized handwriting mein taiyar karne ki service.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="emoji">📝</div>
+          <h3>Fair Copy Writing</h3>
+          <p>
+            Aapke diye gaye content ki neat fair copy
+            aur clean presentation.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="emoji">📒</div>
+          <h3>Project Formatting</h3>
+          <p>
+            Project material ko proper headings,
+            spacing aur readable writing ke saath arrange karna.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="emoji">🖋️</div>
+          <h3>Calligraphy</h3>
+          <p>
+            Creative lettering, decorative writing
+            aur special text presentation.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="emoji">✍️</div>
+          <h3>Handwriting Practice</h3>
+          <p>
+            Better letter formation, spacing aur
+            handwriting practice ke liye material.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="emoji">📄</div>
+          <h3>Custom Writing Work</h3>
+          <p>
+            Apni requirement, pages aur deadline ke
+            baare mein batayein. Availability confirm karein.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="why">
+      <h2 class="section-title">Why Choose Us?</h2>
+      <p class="section-desc">
+        Har order mein clarity aur presentation par focus.
+      </p>
+
+      <div class="benefits">
+        <div class="benefit">
+          ✅ <strong>Neat Presentation</strong><br>
+          Saaf aur readable writing.
+        </div>
+
+        <div class="benefit">
+          ✅ <strong>Custom Requirements</strong><br>
+          Apni need ke according baat karein.
+        </div>
+
+        <div class="benefit">
+          ✅ <strong>Clear Communication</strong><br>
+          Kaam shuru karne se pehle details confirm karein.
+        </div>
+
+        <div class="benefit">
+          ✅ <strong>Transparent Pricing</strong><br>
+          Pages aur work type ke according price confirm karein.
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <h2>Need Handwriting Services?</h2>
+      <p>
+        Apni requirement aur pages ki details WhatsApp par bhejein.
+        Humse service availability aur pricing poochhein.
+      </p>
+
+      <a
+        class="main-btn"
+        href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20mujhe%20handwriting%20service%20ke%20baare%20mein%20jaankari%20chahiye."
+        target="_blank"
+        rel="noopener noreferrer">
+        💬 Chat on WhatsApp
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Handwriting Pro. All Rights Reserved.</p>
+    <p>Handwriting & Writing Services</p>
+  </footer>
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20mujhe%20handwriting%20service%20chahiye."
+    target="_blank"
+    rel="noopener noreferrer">
+    WhatsApp
+  </a>
+
+</body>
+</html>
